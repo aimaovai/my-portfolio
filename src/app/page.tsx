@@ -1,9 +1,5 @@
 'use client'
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import styles from "../styles/Home.module.css";
-import Header from "../components/Header/Header";
 import { useRouter } from "next/navigation";
 
 export default function LandingPage() {
