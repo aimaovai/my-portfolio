@@ -10,7 +10,7 @@ export default function LandingPage() {
   return (
     <div className="background">
      <div className="domain-welcome">
-          <text>Welcome to Aims`&apos;`s Domain</text>
+          <text>Welcome to Aima&apos;s Domain</text>
           <div>
             <button className="enter-button" onClick={() => router.push("/home")}>Click to enter</button>
           </div>
