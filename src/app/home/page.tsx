@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "@/components/Header/Header";
+import NavBar from "@/components/NavBar/NavBar";
 
 
 export default function Home() {
     return (
-        <div className="background2">
-            <Header />
+        <div className="background">
+            <NavBar />
             <div className="domain-welcome">
             <text>Aima Ovai</text>
             </div>

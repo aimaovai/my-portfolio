@@ -1,11 +1,18 @@
 import React from "react";
-import Header from "@/components/Header/Header";
+import NavBar from "@/components/NavBar/NavBar";
+import Article from "@/components/Article/article";
 
 
 export default function About() {
+    const articleHeading = "About Me";
     return (
-        <div className="background2">
-            <Header />
+        <div className="background">
+            <NavBar />
+            <div className="body">
+                <Article
+                    heading={articleHeading} 
+                    content={undefined}                />
+            </div>
         </div>
     );
 

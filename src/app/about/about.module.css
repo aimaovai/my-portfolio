@@ -1,0 +1,7 @@
+.body {
+    height: 80%;
+    width: 80%;
+    color: white;
+    background-color: black;
+    background-origin: padding-box;
+}

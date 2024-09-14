@@ -23,7 +23,17 @@
 .background2 {
   background-image: url('../images/background2.png');
   background-size: cover;
-  height: 100vh;
+  height: 100vmax;
+}
+
+.body {
+  height: 95%;
+  width: 80%;
+  color: white;
+  background-color: black;
+  background-origin: padding-box;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .domain-welcome {
