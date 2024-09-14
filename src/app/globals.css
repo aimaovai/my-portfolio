@@ -23,7 +23,7 @@
 .background2 {
   background-image: url('/public/images/background2.png');
   background-size: cover;
-  height: fit-content;
+  height: 100vmax;
 }
 
 .body {

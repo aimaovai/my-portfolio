@@ -9,7 +9,7 @@ export default function LandingPage() {
     const router = useRouter();
  
   return (
-    <div className="background">
+    <div className="background2">
      <div className="domain_welcome">
           <text>Welcome to Aima&apos;s Domain</text>
           <div className="enter_button">

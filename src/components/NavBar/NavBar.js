@@ -4,6 +4,8 @@ import React from "react";
 import styles from "./NavBar.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import logo from "/public/images/logo.png";
+import Image from "next/image";
 
 export default function NavBar() {
     const pathName = usePathname();
@@ -32,9 +34,12 @@ export default function NavBar() {
     ]
     return (
         <div className={styles.background}>
+            <Link href={"/"} style={{margin: "0 0 0 10%"}}>
+                    <Image src={logo} alt="logo" />
+                </Link>
             <ul className={styles.nav}>
                 {links.map((link) => (
-                    <Link key={link.name} href={link.path} className={(isActive(link.path) ? 'active':"")} style={{ color: "white", fontSize: "larger"}}>{link.name}</Link>
+                    <Link key={link.name} href={link.path} className={(isActive(link.path) ? 'active':"")} style={{ color: "white", fontSize: "larger", margin: "0 10% 0 10%" }}>{link.name}</Link>
                 ))}
                 {/* <Link href={"/home"} className={styles.nav_item (isActive(path) ? 'active':"")}>Home</Link>
                 <Link href={"/about"} className={styles.nav_item (isActive(path) ? 'active':"")} >About</Link>
