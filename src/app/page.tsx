@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter } from "next/navigation";
+import { Button } from "@nextui-org/button";
 
 export default function LandingPage() {
  
@@ -9,10 +10,10 @@ export default function LandingPage() {
  
   return (
     <div className="background">
-     <div className="domain-welcome">
+     <div className="domain_welcome">
           <text>Welcome to Aima&apos;s Domain</text>
-          <div>
-            <button className="enter-button" onClick={() => router.push("/home")}>Click to enter</button>
+          <div className="enter_button">
+            <Button color="default" onClick={() => router.push("/home")}>Click to enter</Button>
           </div>
         </div>
     </div>

@@ -7,7 +7,7 @@ import ProfilePicture from "@/components/ProfilePicture/ProfilePicture";
 export default function About() {
     const articleHeading = "About Me";
     return (
-        <div className="background">
+        <div className="background2">
             <NavBar />
             <div className="body">
                 <Article
