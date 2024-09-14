@@ -1,0 +1,11 @@
+.contact_form {
+    color: black;
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+    line-height: 2;
+    white-space: pre-line;
+}
