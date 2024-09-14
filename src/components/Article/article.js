@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./article.module.css";
-import { getImageProps } from "next/image";
 
 
 export default function Article({ heading, content }) {
