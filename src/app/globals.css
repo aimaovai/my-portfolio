@@ -15,13 +15,13 @@
 }
 
 .background {
-  background-image: url('../images/background.jpg');
+  background-image: url('/public/images/background.jpg');
   background-size: cover;
   height: 100vmax;
 }
 
 .background2 {
-  background-image: url('../images/background2.png');
+  background-image: url('/public/images/background2.png');
   background-size: cover;
   height: 100vmax;
 }
