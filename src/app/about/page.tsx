@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "@/components/NavBar/NavBar";
 import Article from "@/components/Article/article";
+import ProfilePicture from "@/components/ProfilePicture/ProfilePicture";
 
 
 export default function About() {
@@ -11,7 +12,9 @@ export default function About() {
             <div className="body">
                 <Article
                     heading={articleHeading} 
-                    content={undefined}                />
+                    content={undefined}
+                />
+                <ProfilePicture />
             </div>
         </div>
     );

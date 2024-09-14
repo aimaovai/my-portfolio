@@ -7,7 +7,6 @@ export default function Home() {
         <div className="background">
             <NavBar />
             <div className="domain-welcome">
-            <text>Aima Ovai</text>
             </div>
         </div>
     );
