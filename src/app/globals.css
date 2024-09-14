@@ -17,16 +17,25 @@
 .background {
   background-image: url('/public/images/background.jpg');
   background-size: cover;
-  height: 100vmax;
+  height: fit-content;
 }
 
 .background2 {
   background-image: url('/public/images/background2.png');
   background-size: cover;
-  height: 100;
+  height: fit-content;
 }
 
 .body {
+  height:max-content;
+  width: 80%;
+  color: white;
+  background-color: black;
+  background-origin: padding-box;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.body2 {
   height: 95%;
   width: 80%;
   color: white;
