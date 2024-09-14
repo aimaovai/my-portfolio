@@ -1,7 +1,6 @@
 import React from "react";
 import NavBar from "@/components/NavBar/NavBar";
-import Article from "@/components/Article/article";
-// import styles from "./about.module.css";
+import Article from "@/components/Article/Article";
 
 
 export default function About() {
