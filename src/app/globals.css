@@ -17,7 +17,18 @@
 .background {
   background-image: url('/public/images/background.jpg');
   background-size: cover;
-  height: fit-content;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; */
+  /* display: grid;
+  grid-template-columns: repeat(300px, 1fr);
+  gap: 1rem; */
+
 }
 
 .background2 {
@@ -27,7 +38,7 @@
 }
 
 .body {
-  height:max-content;
+  height: fit-content;
   width: 80%;
   color: white;
   background-color: black;
