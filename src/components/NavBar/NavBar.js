@@ -37,10 +37,10 @@ export default function NavBar() {
     ]
     return (
         <nav className={styles.nav}>
-            <div className={styles.nav_container}>
-                <div>
-                    <Link href={"/"}>
-                        <Image src={logo} alt="logo" width={60} height={60} />
+            <div className={`${styles.nav_container}`}>
+                <div style={{ margin: "0 0 0 5%"}}>
+                    <Link href={"/"} >
+                        <Image src={logo} alt="logo" />
                     </Link>
                 </div>
                 <div className={`${styles.hidden}`}>
@@ -54,8 +54,8 @@ export default function NavBar() {
                         </li>
                     </ul>
                 </div>
-                <div className={`${styles.md_hidden} ${nav ? `${styles.menu}` : `${styles.hidden}`}`}>
-                    <ul className={`${styles.nav_mobile_items}`}>
+                <div className={`${styles.md_hidden} ${nav ? `${styles.block}` : `${styles.hidden}`}`}>
+                    <ul /*className={`${styles.menu}`}*/ style={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", width: "100%"}}>
                         <li className={`${styles.li}`}>
                         {links.map((link) => (
                         <Link key={link.name} href={link.path} className={`${(isActive(link.path) ? `${styles.active}` : "")} `} style={{ margin: "0 20px" }}>{link.name}</Link>
@@ -63,14 +63,28 @@ export default function NavBar() {
                         </li>
                     </ul>
                 </div>
+                <div className={`${styles.md_hidden} ${styles.menu_icon}`}  onClick={onClick}>
+                    {nav ? <FaTimes size={15} style={{ color: "white" }} /> : <FaBars size={15} style={{ color: "white" }}/>}
+                </div>
+            </div>
+            {/* <div className={`${styles.md_hidden}`} style={{display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%"}}>
+                <div className={`${styles.md_hidden}`} style={{ margin: "5%" }}>
+                    <Link href={"/"}>
+                        <Image src={logo} alt="logo" width={60} height={60} />
+                    </Link>
+                </div>
+                <div className={`${styles.md_hidden} ${nav ? `${styles.menu}` : `${styles.hidden}`}`}>
+                    <ul className={`${styles.nav_mobile_items}`}>
+                        <li className={`${styles.li}`}>
+                            {links.map((link) => (
+                                <Link key={link.name} href={link.path} className={`${(isActive(link.path) ? `${styles.active}` : "")} `} style={{ margin: "0 20px" }}>{link.name}</Link>
+                            ))}
+                        </li>
+                    </ul>
+                </div>
                 <div className={`${styles.md_hidden} ${styles.menu_icon}`}>
                     {nav ? <FaTimes size={20} style={{ color: "white" }} onClick={onClick} /> : <FaBars size={20} style={{ color: "white" }} onClick={onClick} />}
                 </div>
-            </div>
-            {/* <div className={`${styles.md_hidden} ${nav ? `${styles.menu}` : `${styles.hidden}`} ${styles.nav_mobile_items}`}>
-                {links.map((link) => (
-                    <Link key={link.name} href={link.path} className={`${(isActive(link.path) ? 'active' : "")} ${styles.li}`} >{link.name}</Link>
-                ))}
             </div> */}
         </nav>
     );
