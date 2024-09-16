@@ -9,7 +9,7 @@ import resume from '/public/images/home-resume.jpg';
 import projects from '/public/images/projects.jpg';
 import contact from '/public/images/contact.jpg';
 import Image from "next/image";
-import styles from "./Home.module.css";
+import styles from "./home.module.css";
 
 
 export default function Home() {
