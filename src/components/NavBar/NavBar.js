@@ -67,25 +67,6 @@ export default function NavBar() {
                     {nav ? <FaTimes size={15} style={{ color: "white" }} /> : <FaBars size={15} style={{ color: "white" }}/>}
                 </div>
             </div>
-            {/* <div className={`${styles.md_hidden}`} style={{display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%"}}>
-                <div className={`${styles.md_hidden}`} style={{ margin: "5%" }}>
-                    <Link href={"/"}>
-                        <Image src={logo} alt="logo" width={60} height={60} />
-                    </Link>
-                </div>
-                <div className={`${styles.md_hidden} ${nav ? `${styles.menu}` : `${styles.hidden}`}`}>
-                    <ul className={`${styles.nav_mobile_items}`}>
-                        <li className={`${styles.li}`}>
-                            {links.map((link) => (
-                                <Link key={link.name} href={link.path} className={`${(isActive(link.path) ? `${styles.active}` : "")} `} style={{ margin: "0 20px" }}>{link.name}</Link>
-                            ))}
-                        </li>
-                    </ul>
-                </div>
-                <div className={`${styles.md_hidden} ${styles.menu_icon}`}>
-                    {nav ? <FaTimes size={20} style={{ color: "white" }} onClick={onClick} /> : <FaBars size={20} style={{ color: "white" }} onClick={onClick} />}
-                </div>
-            </div> */}
         </nav>
     );
 }
