@@ -4,7 +4,7 @@ import React from "react";
 import NavBar from "@/components/NavBar/NavBar";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import uiImage from '../../../public/images/ui.jpg';
-import webDevImage from '../../../public/images/web-dev.jpg';
+import githubOfcLogo from '../../../public/images/github-mark-white.png'
 import graphicDesginImage from '../../../public/images/graphic-design.jpg';
 import styles from './projects.module.css';
 
@@ -20,9 +20,9 @@ export default function Projects() {
                         link="/uiprototypes"
                     />
                     <ProjectCard
-                        image={webDevImage}
-                        imageCaption={"Web development projects"}
-                        link="/webdesign"
+                        image={githubOfcLogo}
+                        imageCaption={"GitHub projects"}
+                        link="https://github.com/aimaovai"
                     />
                     <ProjectCard
                         image={graphicDesginImage}
