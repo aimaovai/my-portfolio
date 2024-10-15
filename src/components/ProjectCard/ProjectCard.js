@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from './styles.css';
-import { p, style } from "framer-motion/client";
 
 export default function ProjectCard({ image, imageCaption, link, ...props }) {
     return (
