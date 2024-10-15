@@ -25,6 +25,7 @@
         position: relative;
         height: 30%;
         flex-direction: column;
+        justify-content: space-around;
     }
     
 }
