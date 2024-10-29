@@ -13,7 +13,7 @@ export default function LandingPage() {
      <div className="domain_welcome">
           <text>Welcome to Aima&apos;s Domain</text>
           <div className="enter_button">
-            <Button color="default" onClick={() => router.push("/home")}>Click to enter</Button>
+            <Button color="default" onClick={() => router.push("/home")} style={{ fontSize: "x-large", height: "50px"}}>Click to enter</Button>
           </div>
         </div>
     </div>

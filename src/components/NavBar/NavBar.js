@@ -1,15 +1,18 @@
 'use client'
 
-import React from "react";
+import React, { useState } from "react";
 import styles from "./NavBar.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import logo from "/public/images/logo.png";
+import logo from '/public/images/logo.png';
 import Image from "next/image";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function NavBar() {
     const pathName = usePathname();
     const isActive = (path) => path === pathName;
+    const [nav, setNav] = useState(false);
+    const onClick = () => setNav(!nav);
     const links = [
         {
             name: "Home",
@@ -33,25 +36,37 @@ export default function NavBar() {
         }
     ]
     return (
-        <div className={styles.background}>
-            <Link href={"/"} style={{margin: "0 0 0 10%"}}>
-                    <Image src={logo} alt="logo" />
-                </Link>
-            <ul className={styles.nav}>
-                {links.map((link) => (
-                    <Link key={link.name} href={link.path} className={(isActive(link.path) ? 'active':"")} style={{ color: "white", fontSize: "larger", margin: "0 10% 0 10%" }}>{link.name}</Link>
-                ))}
-                {/* <Link href={"/home"} className={styles.nav_item (isActive(path) ? 'active':"")}>Home</Link>
-                <Link href={"/about"} className={styles.nav_item (isActive(path) ? 'active':"")} >About</Link>
-                <Link href={"/resume"} className={styles.nav_item (isActive(path) ? 'active':"")}>Resume</Link>
-                <Link href={"/projects"} className={styles.nav_item (isActive(path) ? 'active':"")}>Projects</Link>
-                <Link href={"/contact"} className={styles.nav_item (isActive(path) ? 'active':"")}>Contact</Link> */}
-                {/* <a href="">
-                    <li className={styles.nav_item} style={{ color: "white" }}>Home</li>
-                </a>
-                <li className={styles.nav_item} style={{ color: "white" }}>About</li>
-                <li className={styles.nav_item} style={{ color: "white" }}>Contact</li> */}
-            </ul>
-        </div>
+        <nav className={styles.nav}>
+            <div className={`${styles.nav_container}`}>
+                <div style={{ margin: "0 0 0 5%"}}>
+                    <Link href={"/"} >
+                        <Image src={logo} alt="logo" />
+                    </Link>
+                </div>
+                <div className={`${styles.hidden}`}>
+                    <ul className={`${styles.nav_items}`}>
+                        <li className={`${styles.li}`}>
+                            {links.map((link) => (
+                                // <li className={`${styles.li}`}>
+                                <Link key={link.name} href={link.path} className={`${(isActive(link.path) ? `${styles.active}` : "")}`} style={{ margin: "0 20px" }}>{link.name}</Link>
+                                // </li>
+                            ))}
+                        </li>
+                    </ul>
+                </div>
+                <div className={`${styles.md_hidden} ${nav ? `${styles.block}` : `${styles.hidden}`}`}>
+                    <ul /*className={`${styles.menu}`}*/ style={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", width: "100%"}}>
+                        <li className={`${styles.li}`}>
+                        {links.map((link) => (
+                        <Link key={link.name} href={link.path} className={`${(isActive(link.path) ? `${styles.active}` : "")} `} style={{ margin: "0 20px" }}>{link.name}</Link>
+                    ))}
+                        </li>
+                    </ul>
+                </div>
+                <div className={`${styles.md_hidden} ${styles.menu_icon}`}  onClick={onClick}>
+                    {nav ? <FaTimes size={15} style={{ color: "white" }} /> : <FaBars size={15} style={{ color: "white" }}/>}
+                </div>
+            </div>
+        </nav>
     );
 }
