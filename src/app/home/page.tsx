@@ -27,21 +27,38 @@ export default function Home() {
                 src={about}
                 alt="about"
                 objectFit="contain"
-                style={{ borderRadius: "50%", marginBottom: "10px", position: "inherit" }}
+                style={{
+                  borderRadius: "50%",
+                  marginBottom: "10px",
+                  position: "inherit",
+                }}
               />
-              <Button color="primary" size="sm">About</Button>
+              <Button color="primary" size="sm">
+                About
+              </Button>
             </Link>
           </div>
           <div className={styles.matrixItem}>
-            <Link href="/resume" className={styles.itemFlex}>
+            <a
+              href="/documents/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.itemFlex}
+            >
               <Image
                 src={resume}
                 alt="resume"
                 objectFit="contain"
-                style={{ borderRadius: "50%", marginBottom: "10px", position: "inherit" }}
+                style={{
+                  borderRadius: "50%",
+                  marginBottom: "10px",
+                  position: "inherit",
+                }}
               />
-              <Button color="primary" size="sm">Resume</Button>
-            </Link>
+              <Button color="primary" size="sm">
+                Resume
+              </Button>
+            </a>
           </div>
           <div className={styles.matrixItem}>
             <Link href="/projects" className={styles.itemFlex}>
@@ -49,9 +66,15 @@ export default function Home() {
                 src={projects}
                 alt="projects"
                 objectFit="contain"
-                style={{ borderRadius: "50%", marginBottom: "10px", position: "inherit" }}
+                style={{
+                  borderRadius: "50%",
+                  marginBottom: "10px",
+                  position: "inherit",
+                }}
               />
-              <Button color="primary" size="sm">Projects</Button>
+              <Button color="primary" size="sm">
+                Projects
+              </Button>
             </Link>
           </div>
           <div className={styles.matrixItem}>
@@ -60,9 +83,15 @@ export default function Home() {
                 src={contact}
                 alt="contact"
                 objectFit="contain"
-                style={{ borderRadius: "50%", marginBottom: "10px", position: "inherit" }}
+                style={{
+                  borderRadius: "50%",
+                  marginBottom: "10px",
+                  position: "inherit",
+                }}
               />
-              <Button color="primary" size="sm">Contact</Button>
+              <Button color="primary" size="sm">
+                Contact
+              </Button>
             </Link>
           </div>
         </div>
