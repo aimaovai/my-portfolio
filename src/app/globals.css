@@ -17,17 +17,28 @@
 .background {
   background-image: url('/public/images/background.jpg');
   background-size: cover;
-  height: fit-content;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; */
+  /* display: grid;
+  grid-template-columns: repeat(300px, 1fr);
+  gap: 1rem; */
+
 }
 
 .background2 {
   background-image: url('/public/images/background2.png');
   background-size: cover;
-  height: fit-content;
+  height: 100vh;
 }
 
 .body {
-  height:max-content;
+  height: fit-content;
   width: 80%;
   color: white;
   background-color: black;
@@ -46,15 +57,15 @@
 }
 
 .domain_welcome {
-  font-weight: 800;
-  font-size: 6rem;
+  font-weight: 600;
+  font-size: 5rem;
   font-style: normal;
   color: white;
   left: 0;
     line-height: 100px;
     position: relative;
     text-align: center;
-    top: 30%;
+    top: 30vh;
     width: 100%;
   transition:cubic-bezier(0.645, 0.045, 0.355, 1) transform 5s;
 }
@@ -75,3 +86,4 @@ body {
     text-wrap: balance;
   }
 }
+
