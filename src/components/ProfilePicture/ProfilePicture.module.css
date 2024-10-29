@@ -1,0 +1,55 @@
+.picture_body {
+  height: 90%;
+  padding: 10%;
+  align-content: baseline;
+  justify-content: center;
+}
+
+/* Style the container to control image sizing */
+.image-container {
+  max-width: 100%; /* Ensures container width doesn't exceed screen size */
+  max-height: 80%;
+  margin: 0 auto; /* Centers the container */
+}
+
+/* Optional additional styles for the image itself */
+.responsive-image {
+  border-radius: 8px; /* Rounds the corners */
+  object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+}
+
+/* Medium Screens (Tablets, 768px to 1024px) */
+@media (max-width: 1024px) {
+  .image-container {
+    max-width: 600px; /* Reduce max-width on tablets */
+    max-height: 600px;
+    padding: 15px;
+  }
+}
+
+/* Small Screens (Phones, 480px to 767px) */
+@media (max-width: 768px) {
+  .image-container {
+    max-width: 80%; /* Full width with slight padding for mobile */
+    max-height: 60%;
+    padding: 10px;
+  }
+}
+
+/* Extra Small Screens (Phones, less than 480px) */
+@media (max-width: 480px) {
+  .image-container {
+    max-width: 80%; /* Full width for small screens */
+    max-height: 80%;
+    padding: 5px; /* Smaller padding for tight fit */
+  }
+}
+
+/* Very Small Screens (320px and below) */
+@media (max-width: 320px) {
+  .image-container {
+    max-width: 80%; /* Full width on extremely small screens */
+    max-height: 80%;
+    padding: 1px; /* Minimal padding for narrow screens */
+  }
+}
