@@ -10,9 +10,9 @@ import styles from './projects.module.css';
 
 export default function Projects() {
     return (
-        <div className="background2">
+        <div className="content">
             <NavBar />
-            <div>
+            <div className="content-body">
                 <div className={styles.container}>
                     <ProjectCard
                         image={uiImage}

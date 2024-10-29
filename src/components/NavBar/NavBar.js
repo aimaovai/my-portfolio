@@ -89,6 +89,13 @@ export default function NavBar() {
                   {link.name}
                 </Link>
               ))}
+              <a
+                href="/documents/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
             </li>
           </ul>
         </div>
