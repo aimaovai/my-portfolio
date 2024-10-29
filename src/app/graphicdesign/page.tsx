@@ -24,7 +24,8 @@ export default function GraphicDesign() {
                                     alt="logo"
                                     width={200}
                                     height={200}
-                                    style={{ border: "1px solid white" }}
+                                    objectFit="contain"
+                                    style={{ border: "1px solid white", position: "inherit" }}
                                 />
                                 Triple Z Home Solutions
                             </Link>
@@ -40,7 +41,8 @@ export default function GraphicDesign() {
                                     alt="logo"
                                     width={200}
                                     height={200}
-                                    style={{ border: "1px solid white" }}
+                                    objectFit="contain"
+                                    style={{ border: "1px solid white", position: "inherit" }}
                                 />
                                 Aima Ovai Business Card
                             </Link>
@@ -56,7 +58,8 @@ export default function GraphicDesign() {
                                     alt="logo"
                                     width={200}
                                     height={200}
-                                    style={{ border: "1px solid white" }}
+                                    objectFit="contain"
+                                    style={{ border: "1px solid white", position: "inherit" }}
                                 />
                                 Balloon Garlands by Asi
                             </Link>
@@ -77,7 +80,8 @@ export default function GraphicDesign() {
                                     alt="logo"
                                     width={200}
                                     height={200}
-                                    style={{ border: "1px solid white" }}
+                                    objectFit="contain"
+                                    style={{ border: "1px solid white", position: "inherit" }}
                                 />
                                 Virtual Baby Christianing
                             </Link>
@@ -94,7 +98,8 @@ export default function GraphicDesign() {
                                     alt="logo"
                                     width={200}
                                     height={200}
-                                    style={{ border: "1px solid white" }}
+                                    objectFit="contain"
+                                    style={{ border: "1px solid white", position: "inherit" }}
                                 />
                                 60th Birthday Invitation
                             </Link>
@@ -110,7 +115,8 @@ export default function GraphicDesign() {
                                     alt="logo"
                                     width={200}
                                     height={200}
-                                    style={{ border: "1px solid white" }}
+                                    objectFit="contain"
+                                    style={{ border: "1px solid white", position: "inherit" }}
                                 />
                                 RCCG Heaven&apos;s Harmony
                             </Link>
