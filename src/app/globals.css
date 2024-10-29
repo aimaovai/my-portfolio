@@ -2,24 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.body {
-  height: fit-content;
-  width: 80%;
-  color: white;
-  background-color: black;
-  background-origin: padding-box;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-.body2 {
-  height: 95%;
-  width: 80%;
-  color: white;
-  background-color: black;
-  background-origin: padding-box;
-  margin-left: 10%;
-  margin-right: 10%;
-}
+
 .domain_welcome {
   font-weight: 600;
   font-size: 5rem;
@@ -90,7 +73,7 @@ video {
 }
 /* Medium Screens (Tablets, 768px and up) */
 @media (max-width: 1024px) {
-  .body {
+  .content-body {
     margin: 0 5%;
     width: 90%;
     flex-direction: column; /* Switch to column layout on tablets */
@@ -103,28 +86,28 @@ video {
   video {
     height: 100vmax;
   }
-  .body {
+  .content-body {
     margin: 0 2%;
     width: 96%;
-    flex-direction: column; /* Column layout for mobile */
+    flex-direction: row; /* Column layout for mobile */
   }
 }
 @media (max-width: 480px) {
   video {
     height: 100vmax;
   }
-  .body {
+  .content-body {
     margin: 0;
     width: 100%;
     padding: 10px; /* Add padding for breathing space */
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 @media (max-width: 320px) {
   video {
     height: 100vmax;
   }
-  .body {
+  .content-body {
     margin: 0;
     width: 100%;
     padding: 5px; /* Smaller padding to fit small screens */
