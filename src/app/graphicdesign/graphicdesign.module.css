@@ -1,0 +1,69 @@
+/* Base Styles for Large Screens */
+.sectionHeaders {
+    color: white;
+    font-size: xx-large;
+}
+
+.sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: medium;
+    color: white;
+    gap: 20px;               /* Adds space between items */
+}
+
+/* Medium Screens (Tablets, 768px to 1024px) */
+@media (max-width: 1024px) {
+    .sectionHeaders {
+        font-size: x-large;   /* Slightly smaller font for headers */
+    }
+
+    .sections {
+        font-size: medium;
+        flex-direction: row;
+        gap: 15px;           /* Reduce spacing between items */
+    }
+}
+
+/* Small Screens (Phones, 480px to 767px) */
+@media (max-width: 768px) {
+    .sectionHeaders {
+        font-size: large;     /* Adjust header size for small screens */
+    }
+
+    .sections {
+        font-size: small;     /* Reduce font size for better readability */
+        flex-direction: column; /* Stack items vertically on small screens */
+        gap: 10px;            /* Smaller spacing for mobile */
+        align-items: center;  /* Center items vertically */
+    }
+}
+
+/* Extra Small Screens (Phones, less than 480px) */
+@media (max-width: 480px) {
+    .sectionHeaders {
+        font-size: medium;    /* Further reduce font size for narrow screens */
+    }
+
+    .sections {
+        font-size: small;
+        flex-direction: column;
+        gap: 8px;             /* Minimal spacing for narrow screens */
+        align-items: center;
+    }
+}
+
+/* Very Small Screens (320px and below) */
+@media (max-width: 320px) {
+    .sectionHeaders {
+        font-size: small;     /* Smallest size for headers */
+    }
+
+    .sections {
+        font-size: x-small;   /* Small font size for very narrow screens */
+        flex-direction: column;
+        gap: 5px;             /* Minimal spacing for very small screens */
+        align-items: center;
+    }
+}
