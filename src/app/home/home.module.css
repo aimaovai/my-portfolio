@@ -1,0 +1,30 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    grid-template-rows: repeat(2, 1fr);  /* Two equal-height rows */
+    gap: 20px;                      /* Space between grid items */
+    grid-auto-flow: row;
+    width: 100%;
+  }
+  
+  /* Style for each grid item */
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f0f0f0; */
+    /* border: 1px solid #ccc;
+    padding: 20px; */
+    font-size: 1.2em;
+  }
+
+
+/* display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center" */
