@@ -1,57 +1,109 @@
-.form {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    margin: 10%;
-    padding: 10%;
-    height: 80%;
-    width: 80%;
-    border-radius: 10px;
-    border-color: rgb(0, 217, 255);
-    box-shadow: 0 54px 55px rgb(78 78 78 / 25%), 0 -12px 30px rgb(78 78 78 / 25%),
-    0 4px 6px rgb(78 78 78 / 25%), 0 12px 13px rgb(78 78 78 / 25%),
-    0 -3px 5px rgb(78 78 78 / 25%);
-}
-
+/* Base Styles for Large Screens */
 .container {
-    margin-left: 10%;
-    margin-right: 10%;
-    /* padding: 5%; */
-    height: 80%;
-    width: 80%;
-    border-radius: 10px;
-    border-color: rgb(0, 217, 255);
-    box-shadow: 0 54px 55px rgb(78 78 78 / 25%), 0 -12px 30px rgb(78 78 78 / 25%),
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  padding: 5%;
+  width: 80%;
+  border-radius: 10px;
+  border-color: rgb(0, 217, 255);
+  box-shadow: 0 54px 55px rgb(78 78 78 / 25%), 0 -12px 30px rgb(78 78 78 / 25%),
     0 4px 6px rgb(78 78 78 / 25%), 0 12px 13px rgb(78 78 78 / 25%),
     0 -3px 5px rgb(78 78 78 / 25%);
 }
 
-.input {
-    font-size: 1rem;
-    margin: 10px 0 10px 0px;
-    border-color: rgb(31, 28, 28);
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #e8f0fe;
-    color: black;
-}
-
-.text_area {
-    margin: 10px 0 10px 0px;
-    padding: 5px;
-    border-color: rgb(31, 28, 28);
-    border-radius: 5px;
-    background-color: #e8f0fe;
-    font-size: 1rem;
-    color: black;
+.input, .text_area {
+  font-size: 1rem;
+  margin: 10px 0;
+  border-color: rgb(31, 28, 28);
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e8f0fe;
+  color: black;
+  width: 100%;
 }
 
 .entry {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .button {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Medium Screens (Tablets, 768px to 1024px) */
+@media (max-width: 1024px) {
+  .form {
+    width: 90%;
+    padding: 4%;
+    margin: 4%;
+  }
+
+  .input, .text_area {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .button {
+    margin-top: 15px;
+  }
+}
+
+/* Small Screens (Phones, 480px to 767px) */
+@media (max-width: 768px) {
+  .form {
+    width: 95%;
+    padding: 3%;
+    margin: 3%;
+  }
+
+  .input, .text_area {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+}
+
+/* Extra Small Screens (Phones, less than 480px) */
+@media (max-width: 480px) {
+  .form {
+    width: 100%;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 8px;
+  }
+
+  .input, .text_area {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .button {
+    margin-top: 10px;
+  }
+}
+
+/* Very Small Screens (320px and below) */
+@media (max-width: 320px) {
+  .form {
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+  }
+
+  .input, .text_area {
+    font-size: 0.75rem;
+    padding: 4px;
+  }
 }
