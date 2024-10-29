@@ -1,7 +1,52 @@
-.body {
-    height: 80%;
-    width: 80%;
-    color: white;
-    background-color: black;
-    background-origin: padding-box;
+.text {
+  width: 50%;
+  margin-left: 10%;
+  text-align: center;
+  font-size: medium;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: normal;
+  line-height: 2;
+  white-space: pre-line;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .text {
+    width: 70%; /* Increase width for readability */
+    margin-left: 5%; /* Reduce margin */
+    font-size: medium; /* Slightly increase font size */
+  }
+}
+
+/* Small Screens (Phones, 480px to 767px) */
+@media (max-width: 768px) {
+  .text {
+    width: 90%; /* Full width for mobile */
+    margin-left: 0; /* Center align on smaller screens */
+    font-size: small; /* Adjust font size to fit */
+  }
+}
+
+/* Extra Small Screens (Phones, less than 480px) */
+@media (max-width: 480px) {
+  .text {
+    width: 100%; /* Full width on very small screens */
+    margin-left: 0; /* Remove left margin */
+    padding: 10px; /* Add padding for breathing space */
+    font-size: x-small; /* Adjust font size for small screens */
+  }
+}
+
+/* Very Small Screens (320px and below) */
+@media (max-width: 320px) {
+  .text {
+    width: 100%; /* Full width on extremely small screens */
+    margin-left: 0; /* No left margin */
+    padding: 5px; /* Smaller padding for tight fit */
+    font-size: x-small; /* Adjust font size to remain readable */
+    line-height: 1.5; /* Slightly reduce line height */
+  }
 }
