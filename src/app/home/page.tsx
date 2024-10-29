@@ -18,7 +18,7 @@ export default function Home() {
       <NavBar />
       <div
         className="content-body"
-        style={{ flexDirection: "column", justifyContent: "space-evenly" }}
+        // style={{ flexDirection: "column", justifyContent: "space-evenly" }}
       >
         <div className={styles.matrixContainer}>
           <div className={styles.matrixItem}>
@@ -26,9 +26,6 @@ export default function Home() {
               <Image
                 src={about}
                 alt="about"
-                // width={200}
-                // height={200}
-                // layout="fill"
                 objectFit="contain"
                 style={{ borderRadius: "50%", marginBottom: "10px", position: "inherit" }}
               />
@@ -40,9 +37,6 @@ export default function Home() {
               <Image
                 src={resume}
                 alt="resume"
-                // width={200}
-                // height={200}
-                // layout="fill"
                 objectFit="contain"
                 style={{ borderRadius: "50%", marginBottom: "10px", position: "inherit" }}
               />
@@ -54,9 +48,6 @@ export default function Home() {
               <Image
                 src={projects}
                 alt="projects"
-                // width={200}
-                // height={200}
-                // layout="fill"
                 objectFit="contain"
                 style={{ borderRadius: "50%", marginBottom: "10px", position: "inherit" }}
               />
@@ -68,9 +59,6 @@ export default function Home() {
               <Image
                 src={contact}
                 alt="contact"
-                // width={200}
-                // height={200}
-                // layout="fill"
                 objectFit="contain"
                 style={{ borderRadius: "50%", marginBottom: "10px", position: "inherit" }}
               />

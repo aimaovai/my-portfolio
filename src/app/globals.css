@@ -10,7 +10,7 @@
   color: white;
   left: 0;
   line-height: 100px;
-  position: relative;
+  /* position: relative; */
   text-align: center;
   top: 30vh;
   width: 100%;
@@ -18,6 +18,8 @@
 }
 .enter_button {
   margin-top: 10px;
+  font-size: xx-large;
+  height: 50px;
 }
 body {
   color: var(--foreground);
@@ -26,7 +28,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 video {
-  height: 100vh;
+  min-height: 100vh;
+  /* min-height: 80vmax; */
   width: 100%;
   object-fit: cover;
 }
@@ -35,13 +38,13 @@ video {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.5); /* Adjust for content readability */
 }
 .landing-page {
   position: absolute;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   top: 0;
   display: flex;
   flex-direction: column;
@@ -55,14 +58,14 @@ video {
 .content {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   top: 0;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
 }
 .content-body {
-  height: 100vh;
+  min-height: 90vh;
   margin: 0 10%;
   width: 80%;
   background-color: black;
@@ -76,11 +79,23 @@ video {
   .content-body {
     margin: 0 5%;
     width: 90%;
+    /* min-height: 100vmax; */
     flex-direction: column; /* Switch to column layout on tablets */
   }
   video {
     height: 100vmax;
   }
+
+  .overlay {
+    height: 100vmax;
+  }
+
+  .domain_welcome {
+    font-size: 5rem;
+  }
+
+  
+
 }
 @media (max-width: 768px) {
   video {
@@ -91,6 +106,15 @@ video {
     width: 96%;
     flex-direction: row; /* Column layout for mobile */
   }
+
+  .domain_welcome {
+    font-size: 4rem;
+  }
+
+  .text {
+    justify-self: center;
+  }
+
 }
 @media (max-width: 480px) {
   video {
@@ -102,6 +126,17 @@ video {
     padding: 10px; /* Add padding for breathing space */
     flex-direction: row;
   }
+
+  .domain_welcome {
+    font-size: 3rem;
+    line-height: normal;
+  }
+
+  .enter_button {
+    margin-top: 10px;
+    font-size: medium;
+    height: 40px;
+  }
 }
 @media (max-width: 320px) {
   video {
@@ -112,6 +147,16 @@ video {
     width: 100%;
     padding: 5px; /* Smaller padding to fit small screens */
     flex-direction: column;
+  }
+
+  .domain_welcome {
+    font-size: 2rem;
+    line-height: normal;
+  }
+
+  .enter_button {
+    font-size: small;
+    height: 30px;
   }
 }
 @layer utilities {

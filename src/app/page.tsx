@@ -6,12 +6,13 @@ export default function LandingPage() {
   return (
     <div className="landing-page">
       {/* <div className="domain_welcome"> */}
-      <text>Welcome to Aima&apos;s Domain</text>
+      <text className="domain_welcome">Welcome to Aima&apos;s Domain</text>
       <div className="enter_button">
         <Button
           color="default"
           onClick={() => router.push("/home")}
-          style={{ fontSize: "x-large", height: "50px" }}
+          className="enter_button"
+          // style={{ fontSize: "x-large", height: "50px" }}
         >
           Click to enter
         </Button>
