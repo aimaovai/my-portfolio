@@ -1,9 +1,84 @@
-.row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center
+.matrixContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Default to 2 columns */
+  grid-template-rows: repeat(2, 1fr);    /* 2 rows for the 2x2 matrix */
+  max-width: 600px;
+  max-height: 600px;
 }
 
+/* Individual items styling */
+.matrixItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
 
-/* display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center" */
+/* Text alignment inside each item */
+.itemFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Medium Screens (Tablets, 768px to 1024px) */
+@media (max-width: 1024px) {
+  .matrixContainer {
+    grid-template-columns: 1fr 1fr; /* 2 columns for medium screens */
+    gap: 15px; /* Slightly reduce gap */
+  }
+  .matrixItem {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+}
+
+/* Small Screens (Phones, 480px to 767px) */
+@media (max-width: 767px) {
+  .matrixContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px; /* Reduce gap further */
+    justify-self: center;
+  }
+  .matrixItem {
+    height: 90%;
+    width: 90%;
+    font-size: 1rem;
+    padding: 10px;
+    justify-self: center;
+  }
+}
+
+/* Extra Small Screens (Phones, less than 480px) */
+@media (max-width: 480px) {
+  .matrixContainer {
+    grid-template-columns: 1fr 1fr; 
+    gap: 8px;
+  }
+  .matrixItem {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+/* Very Small Screens (320px and below) */
+@media (max-width: 320px) {
+  .matrixContainer {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 5px; /* Minimal gap for very small screens */
+  }
+  .matrixItem {
+    justify-self: center;
+    height: 150px;
+    width: 100px;
+    font-size: 0.8rem; /* Smaller font size for compact screens */
+    padding: 5px;      /* Reduced padding */
+  }
+}
