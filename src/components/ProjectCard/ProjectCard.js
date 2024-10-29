@@ -5,7 +5,7 @@ import styles from './projectcard.module.css';
 
 export default function ProjectCard({ image, imageCaption, link}) {
     return (
-        <div className="card">
+        <div className={styles.card}>
             <Link href={link}>
                 <Image
                     src={image}
