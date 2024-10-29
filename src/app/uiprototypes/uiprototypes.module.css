@@ -1,0 +1,42 @@
+/* Base Styles for Large Screens */
+.imageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    gap: 20px;               /* Adds space between items */
+}
+
+/* Medium Screens (Tablets, 768px to 1024px) */
+@media (max-width: 1024px) {
+    .imageContainer {
+        flex-direction: row; /* Maintain row layout for medium screens */
+        gap: 15px;           /* Reduce spacing between items */
+    }
+}
+
+/* Small Screens (Phones, 480px to 767px) */
+@media (max-width: 768px) {
+    .imageContainer {
+        flex-direction: column; /* Stack items vertically on small screens */
+        justify-content: center;
+        gap: 10px;              /* Smaller spacing for mobile */
+    }
+}
+
+/* Extra Small Screens (Phones, less than 480px) */
+@media (max-width: 480px) {
+    .imageContainer {
+        flex-direction: column;
+        gap: 8px;               /* Minimal spacing for narrow screens */
+    }
+}
+
+/* Very Small Screens (320px and below) */
+@media (max-width: 320px) {
+    .imageContainer {
+        flex-direction: column;
+        gap: 5px;               /* Minimal spacing for very small screens */
+    }
+}
