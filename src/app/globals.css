@@ -68,7 +68,7 @@ video {
   justify-content: center;
 }
 .content-body {
-  height: 100%;
+  min-height:min-content;
   margin: 0 10%;
   width: 80%;
   background-color: black;
