@@ -1,11 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
 .text {
   width: 50%;
-  margin-left: 10%;
+  margin: 5%;
   text-align: center;
   font-size: medium;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: normal;
-  line-height: 2;
+  line-height: 1.5;
   white-space: pre-line;
   display: flex;
   justify-content: center;
@@ -13,20 +22,41 @@
   color: white;
 }
 
+
 @media (max-width: 1024px) {
   .text {
     width: 70%; /* Increase width for readability */
     margin-left: 5%; /* Reduce margin */
     font-size: medium; /* Slightly increase font size */
+
+  }
+}
+
+/* Medium Screens (tablet landscape, smaller laptop screens) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  
+  .text {
+    width: 90%; /* Full width for mobile */
+    font-size: 0.9rem; /* Adjust font size to fit */
+    line-height: 2;
   }
 }
 
 /* Small Screens (Phones, 480px to 767px) */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+  
   .text {
     width: 90%; /* Full width for mobile */
-    margin-left: 0; /* Center align on smaller screens */
-    font-size: small; /* Adjust font size to fit */
+    font-size: 0.9rem; /* Adjust font size to fit */
+    line-height: 1.5;
   }
 }
 
@@ -34,9 +64,14 @@
 @media (max-width: 480px) {
   .text {
     width: 100%; /* Full width on very small screens */
-    margin-left: 0; /* Remove left margin */
-    padding: 10px; /* Add padding for breathing space */
-    font-size: x-small; /* Adjust font size for small screens */
+    padding-top: 10px; /* Add padding for breathing space */
+    font-size: small; /* Adjust font size for small screens */
+    line-height: 1.5;
+  }
+
+  .container {
+    padding-top: 80px;
+    flex-direction: column;
   }
 }
 
@@ -45,8 +80,12 @@
   .text {
     width: 100%; /* Full width on extremely small screens */
     margin-left: 0; /* No left margin */
-    padding: 5px; /* Smaller padding for tight fit */
-    font-size: x-small; /* Adjust font size to remain readable */
+    padding-top: 20px; /* Smaller padding for tight fit */
+    font-size: 0.7rem; /* Adjust font size to remain readable */
     line-height: 1.5; /* Slightly reduce line height */
+  }
+
+  .container {
+    flex-direction: column;
   }
 }

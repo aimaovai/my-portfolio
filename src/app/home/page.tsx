@@ -27,13 +27,9 @@ export default function Home() {
                 src={about}
                 alt="about"
                 objectFit="contain"
-                style={{
-                  borderRadius: "50%",
-                  marginBottom: "10px",
-                  position: "inherit",
-                }}
+                className={styles.image}
               />
-              <Button color="primary" size="sm">
+              <Button color="primary" size="sm" style={{ marginTop: "10px"}}>
                 About
               </Button>
             </Link>
@@ -49,13 +45,9 @@ export default function Home() {
                 src={resume}
                 alt="resume"
                 objectFit="contain"
-                style={{
-                  borderRadius: "50%",
-                  marginBottom: "10px",
-                  position: "inherit",
-                }}
+                className={styles.image}
               />
-              <Button color="primary" size="sm">
+              <Button color="primary" size="sm" style={{ marginTop: "10px"}}>
                 Resume
               </Button>
             </a>
@@ -66,13 +58,9 @@ export default function Home() {
                 src={projects}
                 alt="projects"
                 objectFit="contain"
-                style={{
-                  borderRadius: "50%",
-                  marginBottom: "10px",
-                  position: "inherit",
-                }}
+                className={styles.image}
               />
-              <Button color="primary" size="sm">
+              <Button color="primary" size="sm" style={{ marginTop: "10px"}}>
                 Projects
               </Button>
             </Link>
@@ -83,13 +71,9 @@ export default function Home() {
                 src={contact}
                 alt="contact"
                 objectFit="contain"
-                style={{
-                  borderRadius: "50%",
-                  marginBottom: "10px",
-                  position: "inherit",
-                }}
+                className={styles.image}
               />
-              <Button color="primary" size="sm">
+              <Button color="primary" size="sm" style={{ marginTop: "10px"}}>
                 Contact
               </Button>
             </Link>

@@ -15,10 +15,10 @@
 /* Medium Screens (Tablets, 768px to 1024px) */
 @media (max-width: 1024px) {
     .container {
-        margin: 15% 8% 0 8%;         /* Reduce side margins */
-        height: 60%;                 /* Increase height for better visibility */
+        margin: 0 8% 0 8%;         /* Reduce side margins */
+        height: 30%;                 /* Increase height for better visibility */
         flex-direction: row;
-        justify-content: space-evenly; /* Adjust spacing between items */
+        justify-content: space-between; /* Adjust spacing between items */
     }
 }
 

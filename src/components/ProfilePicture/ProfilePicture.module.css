@@ -1,21 +1,15 @@
-.picture_body {
-  height: 90%;
-  padding: 10%;
-  align-content: baseline;
-  justify-content: center;
-}
-
 /* Style the container to control image sizing */
-.image-container {
+.imageContainer {
   max-width: 100%; /* Ensures container width doesn't exceed screen size */
   max-height: 80%;
-  margin: 0 auto; /* Centers the container */
+  margin: 0 5%; /* Centers the container */
 }
 
 /* Optional additional styles for the image itself */
-.responsive-image {
+.responsiveImage {
   border-radius: 8px; /* Rounds the corners */
   object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+  justify-self: center;
 }
 
 /* Medium Screens (Tablets, 768px to 1024px) */
@@ -27,12 +21,38 @@
   }
 }
 
-/* Small Screens (Phones, 480px to 767px) */
+/* Small Screens (Phones, 640px to 767px) */
 @media (max-width: 768px) {
   .image-container {
     max-width: 80%; /* Full width with slight padding for mobile */
     max-height: 60%;
     padding: 10px;
+  }
+
+  .responsiveImage {
+    border-radius: 8px; /* Rounds the corners */
+    height: 260px;
+    width: 100%;
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+    justify-self: center;
+  }
+}
+
+/* Small Screens (Phones, 480px to 639px) */
+@media (max-width: 768px) {
+  .image-container {
+    max-width: 80%; /* Full width with slight padding for mobile */
+    max-height: 60%;
+    padding: 10px;
+  }
+
+  .responsiveImage {
+    border-radius: 8px; /* Rounds the corners */
+    height: 280px;
+    width: 100%;
+    margin-right: 35%;
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+    justify-self: center;
   }
 }
 
@@ -42,6 +62,14 @@
     max-width: 80%; /* Full width for small screens */
     max-height: 80%;
     padding: 5px; /* Smaller padding for tight fit */
+  }
+
+  .responsiveImage {
+    border-radius: 8px; /* Rounds the corners */
+    height: 30%;
+    width: 100%;
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+    justify-self: center;
   }
 }
 
