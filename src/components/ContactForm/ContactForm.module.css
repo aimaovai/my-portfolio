@@ -39,8 +39,34 @@
 
 .button {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 10px;
+  margin: 10px 20%;
+}
+
+/* Apply the animation to the element */
+.disappear {
+  opacity: 0;
+  animation: fadeInOut 4s forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  25% {
+    opacity: 1;
+    visibility: visible;
+  }
+  75% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /* Medium Screens (Tablets, 768px to 1024px) */
