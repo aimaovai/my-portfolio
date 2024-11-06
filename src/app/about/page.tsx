@@ -8,21 +8,31 @@ export default function About() {
   return (
     <div className="content">
       <NavBar />
-
       <div className="content-body">
         <div className={styles.container}>
-          <div className={styles.text}>
-            <p style={{ whiteSpace: "preserve" }}>
-              Aima Ovai is a dedicated software engineer with over two years of
-              professional experience specializing in full-stack development,
-              scalable web applications, and cloud technologies. With a strong
-              technical foundation in Java, Python, and React, Aima brings a
-              versatile skill set that allows her to tackle diverse engineering
-              challenges effectively. Her background in biomedical engineering
-              adds a unique perspective, fostering analytical precision and an
-              innovative mindset essential for problem-solving in high-stakes
-              environments. Passionate about continuous learning and quick to
-              adapt to emerging technologies, Aima is committed to delivering
+          <div className={styles["h1-container"]}>
+            <h1>About Me</h1>
+          </div>
+          <div className={styles["about-container"]}>
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <p className={styles.p1} style={{ whiteSpace: "preserve" }}>
+                Aima Ovai is a dedicated software engineer with over two years
+                of professional experience specializing in full-stack
+                development, scalable web applications, and cloud technologies.
+                With a strong technical foundation in Java, Python, and React,
+                Aima brings a versatile skill set that allows her to tackle
+                diverse engineering challenges effectively. Her background in
+                biomedical engineering adds a unique perspective, fostering
+                analytical precision and an innovative mindset essential for
+                problem-solving in high-stakes environments.
+              </p>
+
+              <ProfilePicture />
+            </div>
+            <div style={{ display: "flex", flexDirection: "row" }}>
+            <p className={styles.p2}>
+              Passionate about continuous learning and quick to adapt to
+              emerging technologies, Aima is committed to delivering
               user-centered solutions that make a measurable impact. Known for
               her collaborative spirit, Aima thrives in dynamic,
               cross-functional teams, contributing to projects with creativity
@@ -31,9 +41,7 @@ export default function About() {
               impactful, reliable software solutions that enhance both user
               experience and team productivity.
             </p>
-          </div>
-          <div style={{ width: "50%" }}>
-            <ProfilePicture />
+            </div>
           </div>
         </div>
       </div>

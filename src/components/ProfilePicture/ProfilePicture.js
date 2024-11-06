@@ -9,8 +9,8 @@ export default function ProfilePicture() {
       <Image
         src={aima} // Replace with your image path
         alt="Descriptive Alt Text" // Describe the image
-        width={300} // Original width of the image
-        height={300} // Original height of the image
+        width={250} // Original width of the image
+        height={200} // Original height of the image
         className={styles.responsiveImage} // Optional custom class
       />
     </div>
