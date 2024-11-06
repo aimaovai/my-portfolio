@@ -6,9 +6,9 @@ export default function Contact() {
   return (
     <div className="content">
       <NavBar />
-      <div className="content-body">
+      {/* <div className="content-body"> */}
         <ContactForm />
-      </div>
+      {/* </div> */}
     </div>
   );
 }
