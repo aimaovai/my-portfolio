@@ -74,8 +74,8 @@ video {
   padding-top: 80px;
   background-color: black;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 }
 /* Medium Screens (Tablets, 768px and up) */
@@ -85,7 +85,7 @@ video {
     width: 90%;
     padding-top: 80px;
     height: 100vh;
-    flex-direction: row; /* Switch to column layout on tablets */
+    flex-direction: column; /* Switch to column layout on tablets */
   }
   video {
     height: 100vmax;
