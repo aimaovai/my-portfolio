@@ -8,6 +8,19 @@
     gap: 20px;               /* Adds space between items */
 }
 
+.back-button {
+    position: relative;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+    width: 80%;
+}
+.back-button svg {
+    width: 60px;
+    height: 50%;
+}
+
 /* Medium Screens (Tablets, 768px to 1024px) */
 @media (max-width: 1024px) {
     .imageContainer {

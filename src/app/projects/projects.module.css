@@ -1,54 +1,84 @@
 /* Base Styles for Large Screens */
 .container {
-    margin: 20% 10% 0% 10%;
-    left: 0;
+    padding-top: 80px;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    background-color: black;
+}
+.card-container {
     z-index: 1;
     position: relative;
     text-align: center;
-    height: 50%;
+    height: 80%;
+    width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    color: white;
+    justify-content: center;
 }
+
+.back-button {
+    position: relative;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+    width: 80%;
+}
+.back-button svg {
+    width: 60px;
+    height: 50%;
+}
+
 
 /* Medium Screens (Tablets, 768px to 1024px) */
 @media (max-width: 1024px) {
-    .container {
-        margin: 0 8% 0 8%;         /* Reduce side margins */
-        height: 30%;                 /* Increase height for better visibility */
+    .card-container {        /* Reduce side margins */
+        height: 80%;                 /* Increase height for better visibility */
         flex-direction: row;
-        justify-content: space-between; /* Adjust spacing between items */
+        justify-content: space-evenly; /* Adjust spacing between items */
     }
 }
 
 /* Small Screens (Phones, 480px to 767px) */
 @media (max-width: 768px) {
     .container {
-        margin: 10% 5% 0 5%;         /* Further reduce side margins */
-        height: 70%;
+        height: 100%;
         flex-direction: column;      /* Stack items vertically */
         justify-content: center;     /* Center items vertically */
-        text-align: center;
+    }
+    .card-container {
+        height: 80%;
+        width: 80%;
+        flex-direction: row;      /* Stack items vertically */
+        justify-content: center;     /* Center items vertically */
     }
 }
 
 /* Extra Small Screens (Phones, less than 480px) */
 @media (max-width: 480px) {
     .container {
-        margin: 5% 2% 0 2%;          /* Minimal margins on small screens */
-        height: auto;                /* Let height adjust naturally */
+        height: 100%;
+        justify-content: normal;
+    }
+    .card-container {
+        height: 100%;                /* Let height adjust naturally */
+        width: 100%;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
     }
 }
 
 /* Very Small Screens (320px and below) */
 @media (max-width: 320px) {
     .container {
-        margin: 5% 1% 0 1%;          /* Minimal margins for 320px */
-        height: auto;                /* Adjust height based on content */
+        height: 100vh;
+    }
+    .card-container {
         flex-direction: column;
-        justify-content: center;
     }
 }
