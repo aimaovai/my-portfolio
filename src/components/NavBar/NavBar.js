@@ -33,8 +33,9 @@ export default function NavBar() {
   ];
   return (
     <nav className={styles.nav}>
-      <div className={`${styles.nav_container}`}>
-        <div style={{ margin: "0 0 0 5%" }}>
+      <div style={{ width: "90%" }}>
+        <div className={`${styles.nav_container}`}>
+        <div style={{ margin: "0 0 0 5%", border: "1px solid black", borderRadius: "50%", height: "10%", width: "6%", backgroundColor: "black" }}>
           <Link href={"/"}>
             <Image src={logo} alt="logo" />
           </Link>
@@ -104,10 +105,11 @@ export default function NavBar() {
           onClick={onClick}
         >
           {nav ? (
-            <FaTimes size={15} style={{ color: "white" }} />
+            <FaTimes size={15} style={{ color: "black" }} />
           ) : (
-            <FaBars size={15} style={{ color: "white" }} />
+            <FaBars size={15} style={{ color: "black" }} />
           )}
+        </div>
         </div>
       </div>
     </nav>

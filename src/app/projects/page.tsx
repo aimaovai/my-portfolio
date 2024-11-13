@@ -9,13 +9,17 @@ import graphicDesginImage from "../../../public/images/graphic-design.jpg";
 import styles from "./projects.module.css";
 import { BiArrowBack } from "react-icons/bi";
 import { useRouter } from "next/navigation";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import Link from "next/link";
+import { SiCodesignal } from "react-icons/si";
 
 export default function Projects() {
     const router = useRouter();
   return (
     <div className="content">
       <NavBar />
-      <div className={styles.container}>
+     <div className="content-body">
+     <div className={styles.container}>
         <div className={styles["back-button"]}>
           <BiArrowBack onClick={() => router.push("/home")} />
         </div>
@@ -42,6 +46,21 @@ export default function Projects() {
           />
         </div>
       </div>
+      <div className={styles.footer}>
+            <Link href="https://github.com/aimaovai" target="_blank">
+              <BsGithub />
+            </Link>
+            <Link href="https://www.linkedin.com/in/aimaovai/" target="_blank">
+              <BsLinkedin />
+            </Link>
+            <Link
+              href="https://learn.codesignal.com/profile/cm0d40pn30006hh0kykue9gtg"
+              target="_blank"
+            >
+              <SiCodesignal />
+            </Link>
+          </div>
+     </div>
     </div>
   );
 }
