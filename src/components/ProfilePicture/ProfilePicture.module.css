@@ -1,7 +1,6 @@
 /* Style the container to control image sizing */
 .imageContainer {
-  max-width: 100%; /* Ensures container width doesn't exceed screen size */
-  max-height: 100%;
+  width: 100%; 
   margin: 0 2%; /* Centers the container */
   align-items: center;
   justify-content: center;

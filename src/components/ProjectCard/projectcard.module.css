@@ -6,7 +6,7 @@
     justify-content: center;
 }
 .card {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: large;
     display: flex;
     width: 90%;
@@ -14,7 +14,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border: 1px solid white;
+    border: 1px solid rgb(0, 0, 0);
     margin: 0 10px;
     border-radius: 5px;
     box-shadow: 0 54px 55px rgb(78 78 78 / 25%), 0 -12px 30px rgb(78 78 78 / 25%),

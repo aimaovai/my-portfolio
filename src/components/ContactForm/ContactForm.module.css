@@ -1,8 +1,7 @@
 /* Base Styles for Large Screens */
 .container {
   width: 80%;
-  min-height: 100%;
-  margin-top: 80px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
