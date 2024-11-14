@@ -64,6 +64,22 @@
   color: rgb(0, 0, 0);
 }
 
+.footer {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 0 10%; */
+  padding: 20px 0;
+  gap: 100px;
+}
+
+.footer svg {
+  width: 35px;
+  height: 35px;
+}
+
 @media (max-width: 1920px) {
   .p1 {
     width: 85%; /* Increase width for readability */
