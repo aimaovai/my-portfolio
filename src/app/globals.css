@@ -146,6 +146,9 @@ h1 {
     font-size: medium;
     height: 40px;
   }
+  h1 {
+    font-size: x-large;
+  }
 }
 @media (max-width: 320px) {
   video {
