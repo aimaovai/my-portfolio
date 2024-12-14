@@ -1,65 +1,124 @@
 /* Base Styles for Large Screens */
+.card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .card {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: large;
     display: flex;
-    width: 200px;
-    height: 250px;
+    width: 90%;
+    height: 100%;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 10px 20px;
+    justify-content: space-evenly;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 54px 55px rgb(78 78 78 / 25%), 0 -12px 30px rgb(78 78 78 / 25%),
+    0 4px 6px rgb(78 78 78 / 25%), 0 12px 13px rgb(78 78 78 / 25%),
+    0 -3px 5px rgb(78 78 78 / 25%);
 }
 
 .card img {
     width: 100%;                /* Image fills the width of the card */
-    height: auto;               /* Maintains aspect ratio */
-    max-height: 200px;          /* Sets a maximum height for the image */
+    height: 100%;               /* Maintains aspect ratio */
     object-fit: cover;          /* Ensures the image covers the area without distortion */
-    border-radius: 4px;         /* Optional: rounded corners */
+    justify-self: center;
 }
 
 .caption {
     height: 30px;
     width: 100%;                /* Matches width of card */
-    margin-top: 5px;
-    border: 1px solid black;
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    font-size: x-large;
+    font-weight: 500;
 }
 
-/* Medium Screens (Tablets, 768px to 1024px) */
-@media (max-width: 1024px) {
+.card-description {
+    font-size: larger;
+}
+
+.card-description p {
+    width: 90%;
+    text-align: center;
+    justify-self: center;
+    line-height: 1.8;
+}
+
+@media (max-width: 1440px) {
     .card {
-        width: 180px;
-        height: 230px;
-        font-size: medium;
-        margin: 0 20px;
+        width: 90%;
+        height: 100%;
     }
 
     .caption {
-        width: 180px;
-        height: 25px;
+        width: 80%;
+        height: 30px;
+        font-size: larger;
+    }
+
+    .card-description p {
+        font-size: large;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 1290px) {
+    .card {
+        width: 90%;
+        height: 100%;
+    }
+
+    .caption {
+        width: 80%;
+        height: 30px;
+        font-size: large;
+    }
+
+    .card-description p {
         font-size: medium;
+        line-height: 2;
+    }
+}
+/* Medium Screens (Tablets, 768px to 1024px) */
+@media (max-width: 1024px) {
+    .card {
+        width: 90%;
+        height: 100%;
+    }
+
+    .caption {
+        width: 80%;
+        height: 30px;
+        font-size: large;
+    }
+
+    .card-description p {
+        font-size: medium;
+        line-height: 2;
     }
 }
 
 /* Small Screens (Phones, 480px to 767px) */
 @media (max-width: 768px) {
     .card {
-        width: 150px;
-        height: 200px;
+        width: 90%;
+        height: 100%;
         font-size: small;
     }
 
     .caption {
-        width: 150px;
+        width: 90%;
         height: 25px;
         font-size: small;
     }
+    .card-description p {
+        font-size: small;
+        line-height: normal;
+    }
+
 }
 
 /* Extra Small Screens (Phones, less than 480px) */
@@ -68,26 +127,40 @@
         width: 130px;
         height: 180px;
         font-size: small;
+
     }
 
     .caption {
-        width: 130px;
-        height: 20px;
+        width: 80%;
+        height: 50px;
         font-size: small;
+    }
+
+    .card-description p {
+        display: none;
     }
 }
 
 /* Very Small Screens (320px and below) */
 @media (max-width: 320px) {
     .card {
-        width: 100px;
-        height: 150px;
+        width: 90%;
+        height: 100%;
         font-size: x-small;
+    }
+    .card img {
+        padding-top: 10px;
+        width: 95%;
+        height: 85%;
     }
 
     .caption {
-        width: 100px;
-        height: 20px;
-        font-size: x-small;
+        height: 50px;
+        font-size: small;
+        padding-bottom: 10px;
+    }
+
+    .card-description p {
+        display: none;
     }
 }

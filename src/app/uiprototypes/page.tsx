@@ -1,16 +1,22 @@
+'use client';
+
 import React from "react";
 import NavBar from "@/components/NavBar/NavBar";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./uiprototypes.module.css";
-// import { useRouter } from "next/navigation";
+import { BiArrowBack } from "react-icons/bi";
+import { useRouter } from "next/navigation";
 
 export default function UIPrototypes() {
-  // const router = useRouter();
+  const router = useRouter();
   return (
     <div className="content">
       <NavBar />
       <div className="content-body">
+      <div className={styles["back-button"]}>
+          <BiArrowBack onClick={() => router.back()} />
+        </div>
         <div
         className={styles.imageContainer}
         >

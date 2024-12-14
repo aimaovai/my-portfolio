@@ -9,3 +9,19 @@
     line-height: 2;
     white-space: pre-line;
 }
+
+.footer {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 0 10%; */
+    padding: 20px 0;
+    gap: 100px;
+  }
+  
+  .footer svg {
+    width: 35px;
+    height: 35px;
+  }
