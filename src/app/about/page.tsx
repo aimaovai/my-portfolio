@@ -25,7 +25,7 @@ export default function About() {
                 Hey there! I&apos;m Aima Ovai—a full-stack software engineer passionate about building innovative digital experiences that engage, inspire, and create real impact. With a background that balances creativity and technical precision, I&apos;ve dived into everything from UI/UX design to backend development, aiming to bring seamless and smart solutions to life.
                 </p>
                 <p className={styles.p1} style={{ whiteSpace: "preserve" }}>
-                I&apos;m also the creator of <i >The Naija Techie</i>, a brand where I empower tech enthusiasts by sharing resources, insights, and lessons from my journey as a Nigerian in the tech industry. Rooted in my experiences, <i>The Naija Techie</i> celebrates the resilience, creativity, and potential of individuals navigating their own paths in tech, offering a space for inspiration, knowledge-sharing, and community building.
+                I&apos;m also the creator of <i >The 9ja Techie</i>, a brand where I empower tech enthusiasts by sharing resources, insights, and lessons from my journey as a Nigerian in the tech industry. Rooted in my experiences, <i>The 9ja Techie</i> celebrates the resilience, creativity, and potential of individuals navigating their own paths in tech, offering a space for inspiration, knowledge-sharing, and community building.
                 </p>
               </div>
               <ProfilePicture />
