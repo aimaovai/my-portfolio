@@ -7,6 +7,7 @@ import Image from "next/image";
 import styles from "./graphicdesign.module.css";
 import { BiArrowBack } from "react-icons/bi";
 import { useRouter } from "next/navigation";
+import Footer from "@/components/Footer/Footer";
 // import { isMobile, isTablet, isDesktop } from 'react-device-detect';
 
 export default function GraphicDesign() {
@@ -97,6 +98,7 @@ export default function GraphicDesign() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

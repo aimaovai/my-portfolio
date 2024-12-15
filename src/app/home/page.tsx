@@ -2,12 +2,11 @@
 
 import React from "react";
 import NavBar from "@/components/NavBar/NavBar";
+import Footer from "@/components/Footer/Footer";
 import "./home.module.css";
 import Image from "next/image";
 import styles from "./home.module.css";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { SiCodesignal } from "react-icons/si";
-import Link from "next/link";
+
 
 export default function Home() {
   const highlights = [
@@ -41,7 +40,8 @@ export default function Home() {
           <h1>Hi, I&apos;m Aima.</h1>
           <p>
             I&apos;m a software engineer with a focus on frontend development
-            and an educational background in biomedical engineering.
+            and an educational background in biomedical engineering. A highlight
+            of my experience is below.
           </p>
         </div>
         <div className={styles.container}>
@@ -53,23 +53,27 @@ export default function Home() {
                     <h2 className={styles.h2}>{highlight.heading}</h2>
                     <p className={styles.p}>{highlight.description}</p>
                   </div>
-                  <Image
-                    src={highlight.image}
-                    alt="highlight"
-                    width={650}
-                    height={500}
-                    className={styles.image}
-                  />
+                  <div>
+                    <Image
+                      src={highlight.image}
+                      alt="highlight"
+                      width={650}
+                      height={500}
+                      className={styles.image}
+                    />
+                  </div>
                 </div>
               ) : (
                 <div className={styles.section} style={{ order: -1 }}>
-                  <Image
-                    src={highlight.image}
-                    alt="highlight"
-                    width={650}
-                    height={500}
-                    className={styles.image}
-                  />
+                  <div>
+                    <Image
+                      src={highlight.image}
+                      alt="highlight"
+                      width={650}
+                      height={500}
+                      className={styles.image}
+                    />
+                  </div>
                   <div className={styles["text-left"]}>
                     <h2 className={styles.h2}>{highlight.heading}</h2>
                     <p className={styles.p}>{highlight.description}</p>
@@ -79,17 +83,8 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className={styles.footer}>
-          <Link href="https://github.com/aimaovai" target="_blank">
-            <BsGithub />
-          </Link>
-         <Link href="https://www.linkedin.com/in/aimaovai/" target="_blank">
-         <BsLinkedin />
-         </Link>
-          <Link href="https://learn.codesignal.com/profile/cm0d40pn30006hh0kykue9gtg" target="_blank">
-          <SiCodesignal /></Link>
-        </div>
       </div>
+      <Footer />
     </div>
   );
 }

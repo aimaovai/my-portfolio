@@ -3,15 +3,13 @@
 import NavBar from "@/components/NavBar/NavBar";
 import ProfilePicture from "@/components/ProfilePicture/ProfilePicture";
 import styles from "./about.module.css";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { SiCodesignal } from "react-icons/si";
-import Link from "next/link";
+import Footer from "@/components/Footer/Footer";
 
 export default function About() {
   return (
     <div className="content">
       <NavBar />
-      <div className="content-body">
+      <div className={styles["content-body"]}>
         <div className={styles.container}>
           <div className={styles["h1-container"]}>
             <h1>About Me</h1>
@@ -26,6 +24,7 @@ export default function About() {
                 </p>
                 <p className={styles.p1} style={{ whiteSpace: "preserve" }}>
                 I&apos;m also the creator of <i >The 9ja Techie</i>, a brand where I empower tech enthusiasts by sharing resources, insights, and lessons from my journey as a Nigerian in the tech industry. Rooted in my experiences, <i>The 9ja Techie</i> celebrates the resilience, creativity, and potential of individuals navigating their own paths in tech, offering a space for inspiration, knowledge-sharing, and community building.
+
                 </p>
               </div>
               <ProfilePicture />
@@ -40,22 +39,9 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className={styles.footer}>
-            <Link href="https://github.com/aimaovai" target="_blank">
-              <BsGithub />
-            </Link>
-            <Link href="https://www.linkedin.com/in/aimaovai/" target="_blank">
-              <BsLinkedin />
-            </Link>
-            <Link
-              href="https://learn.codesignal.com/profile/cm0d40pn30006hh0kykue9gtg"
-              target="_blank"
-            >
-              <SiCodesignal />
-            </Link>
-          </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
