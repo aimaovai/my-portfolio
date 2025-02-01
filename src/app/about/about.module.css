@@ -56,9 +56,6 @@
   font-style: normal;
   line-height: 2.5rem;
   white-space: pre-line;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
   color: rgb(0, 0, 0);
 }
 
@@ -120,12 +117,12 @@
   }
   .p1 {
     width: 95%; /* Increase width for readability */
-    font-size: smaller; /* Slightly increase font size */
+    font-size: medium; /* Slightly increase font size */
     line-height: 2rem;
   }
 
   .p2 {
-    font-size: smaller; /* Slightly increase font size */
+    font-size: medium; /* Slightly increase font size */
     line-height: 2rem;
   }
 }
