@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import aima from "/public/images/aima.jpg";
+import aima from "/public/images/profile-pic.jpg";
 import styles from "./ProfilePicture.module.css";
 
 export default function ProfilePicture() {
@@ -9,9 +9,9 @@ export default function ProfilePicture() {
       <Image
         src={aima} // Replace with your image path
         alt="Descriptive Alt Text" // Describe the image
-        width={250} // Original width of the image
-        height={200} // Original height of the image
-        className={styles.responsiveImage} // Optional custom class
+        height={100}
+        width={100}
+        layout="responsive"
       />
     </div>
   );

@@ -1,10 +1,10 @@
 /* Style the container to control image sizing */
 .imageContainer {
-  width: 100%; 
-  margin: 0 2%; /* Centers the container */
+  width: 60%; 
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2% 5% 5% 5%;
 }
 
 /* Optional additional styles for the image itself */
