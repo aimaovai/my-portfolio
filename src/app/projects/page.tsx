@@ -24,7 +24,7 @@ export default function Projects() {
           <div className={styles["card-container"]}>
             <ProjectCard
               image={uiImage}
-              imageCaption={"UI projects"}
+              imageCaption={"Dev projects"}
               link="/uiprototypes"
               cardDescription={
                 "Discover my collection of UI projects, each crafted with a focus on intuitive design, responsive layouts, and smooth interactions. Click through to see how I bring user experiences to life, combining functionality with style in every detail!"
@@ -40,7 +40,7 @@ export default function Projects() {
             />
             <ProjectCard
               image={graphicDesginImage}
-              imageCaption={"Graphic design projects"}
+              imageCaption={"Graphic Design"}
               link="/graphicdesign"
               cardDescription={
                 "Explore my graphic design portfolio, featuring bold visuals, creative layouts, and a flair for detail. See how I bring ideas to life through impactful designs tailored for digital and print!"
