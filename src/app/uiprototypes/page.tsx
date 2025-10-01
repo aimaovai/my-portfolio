@@ -35,7 +35,7 @@ export default function UIPrototypes() {
           </div>
           <div style={{ margin: "15px 0"}}>
             <Image
-              src="/images/triplez-desktop.png"
+              src="/images/triplez-home.jpg"
               alt="logo"
               width={300}
               height={300}
