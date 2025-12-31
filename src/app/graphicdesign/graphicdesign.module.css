@@ -1,69 +1,302 @@
 /* Base Styles for Large Screens */
-.sectionHeaders {
-    color: white;
-    font-size: xx-large;
+.container {
+    height: fit-content;
+    width: 90%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin-top: 80px;
+    padding: 40px 0;
+}
+.content-body {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  
 }
 
-.sections {
+.sectionHeader {
+  color: rgb(0, 0, 0);
+  font-size: xx-large;
+  width: 100%;
+}
+.md-hidden {
+    display: none;
+  }
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: medium;
+  height: 100%;
+  width: 100%;
+}
+
+.flyer-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     font-size: medium;
-    color: white;
-    gap: 20px;               /* Adds space between items */
+    color: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+  }
+
+.card-container div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  gap: 15px;
+}
+
+.card-container div img {
+  /* width: 100%;
+  height: 85%; */
+  box-shadow: 0 54px 55px rgb(78 78 78 / 25%), 0 -12px 30px rgb(78 78 78 / 25%),
+  0 4px 6px rgb(78 78 78 / 25%), 0 12px 13px rgb(78 78 78 / 25%),
+  0 -3px 5px rgb(78 78 78 / 25%);
+}
+
+.card-container span {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flyer-container div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    gap: 30px;
+  }
+
+.flyer-container div img {
+    width: 100%;
+    height: 85%;
+    box-shadow: 0 54px 55px rgb(78 78 78 / 25%), 0 -12px 30px rgb(78 78 78 / 25%),
+    0 4px 6px rgb(78 78 78 / 25%), 0 12px 13px rgb(78 78 78 / 25%),
+    0 -3px 5px rgb(78 78 78 / 25%);
+  }
+.back-button {
+  position: relative;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  z-index:01;
+  width: 100%;
+}
+.back-button svg {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width:1290px) {
+    .container {
+        height: 100%;
+    }
+    .card-container span {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+    }
 }
 
 /* Medium Screens (Tablets, 768px to 1024px) */
 @media (max-width: 1024px) {
-    .sectionHeaders {
-        font-size: x-large;   /* Slightly smaller font for headers */
-    }
+  .sectionHeader {
+    font-size: x-large; /* Slightly smaller font for headers */
+  }
 
-    .sections {
-        font-size: medium;
-        flex-direction: row;
-        gap: 15px;           /* Reduce spacing between items */
-    }
+  
 }
 
 /* Small Screens (Phones, 480px to 767px) */
 @media (max-width: 768px) {
-    .sectionHeaders {
-        font-size: large;     /* Adjust header size for small screens */
-    }
+  .sectionHeader {
+    font-size: x-large; /* Adjust header size for small screens */
+  }
+  .card-container {
+    height: 35%;
+  }
+  .card-container div {
+    width: 100%;
+    gap: 5px;
+  }
 
-    .sections {
-        font-size: small;     /* Reduce font size for better readability */
-        flex-direction: column; /* Stack items vertically on small screens */
-        gap: 10px;            /* Smaller spacing for mobile */
-        align-items: center;  /* Center items vertically */
-    }
+  .flyer-container div {
+    width: 100%;
+    gap: 5px;
+  }
+  .back-button svg {
+    width: 35px;
+    height: 35px;
+  }
+  .card-text {
+    font-size: small;
+    height: 50px;
+  }
+
 }
 
 /* Extra Small Screens (Phones, less than 480px) */
 @media (max-width: 480px) {
-    .sectionHeaders {
-        font-size: medium;    /* Further reduce font size for narrow screens */
+  .content-body {
+    height: 90%;
+    gap: 25px;
+    justify-content: unset;
+}
+    .container {
+        height: 100vh;
     }
+    .sectionHeader {
+    font-size: large; /* Smallest size for headers */
+    font-weight: bold;
+  }
 
-    .sections {
-        font-size: small;
-        flex-direction: column;
-        gap: 8px;             /* Minimal spacing for narrow screens */
-        align-items: center;
-    }
+  .card-container {
+    width: 100%;
+    height: 35%;
+    overflow: hidden;
+    position: relative;
+  }
+  .flyer-container {
+    height: 45%;
+    width: 100% ;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card-container div {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 10px;
+    animation: bounce 15s infinite;
+  }
+  .flyer-container div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    animation: bounce 15s infinite;
+  }
+  /* .card-container span {
+    align-content: center;
+  } */
+  .flyer-container span {
+    align-content: end;
+  }
+  /* .card-container a {
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+  } */
+  .flyer-container a {
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .back-button svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card-text {
+    display: none;
+  }
 }
 
 /* Very Small Screens (320px and below) */
 @media (max-width: 320px) {
-    .sectionHeaders {
-        font-size: small;     /* Smallest size for headers */
+    .content-body {
+        height: 90%;
+        gap: 20px;
+        justify-content: unset;
     }
+    .sectionHeader {
+    font-size: large;
+  }
 
-    .sections {
-        font-size: x-small;   /* Small font size for very narrow screens */
-        flex-direction: column;
-        gap: 5px;             /* Minimal spacing for very small screens */
-        align-items: center;
-    }
+  .card-container {
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .flyer-container {
+    height: 30%;
+    width: 100% ;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card-container div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    animation: bounce 15s infinite;
+  }
+  .flyer-container div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    animation: bounce 15s infinite;
+  }
+
+  .card-container div img {
+    height: 90%;
+  }
+
+  .flyer-container div img {
+    height: 100%;
+  }
+  .flyer-container span {
+    align-content: center;
+  }
+  .flyer-container a {
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .back-button svg {
+    width: 20px;
+    height: 20px;
+  }
+  .card-text {
+    display: none;
+  }
+  
+
 }
+
+@keyframes bounce {
+    0% {
+      transform: translateX(0%);
+    }
+    25% {
+      transform: translateX(-5%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    75% {
+      transform: translateX(5%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+

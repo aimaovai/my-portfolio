@@ -1,3 +1,14 @@
+.content-body {
+  width: 90%;
+  margin-top: 80px;
+  padding: 40px 0;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-self: center;
+  align-items: center;
+}
 .contact_form {
     color: black;
     padding-top: 2%;
@@ -9,3 +20,19 @@
     line-height: 2;
     white-space: pre-line;
 }
+
+.footer {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 0 10%; */
+    padding: 20px 0;
+    gap: 100px;
+  }
+  
+  .footer svg {
+    width: 35px;
+    height: 35px;
+  }

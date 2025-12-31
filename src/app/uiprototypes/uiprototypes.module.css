@@ -1,42 +1,90 @@
 /* Base Styles for Large Screens */
-.imageContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    gap: 20px;               /* Adds space between items */
+.content-body {
+  width: 90%;
+  height: 100vh;
+  margin-top: 80px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
 }
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  gap: 20px; /* Adds space between items */
+}
+
+.back-button {
+    position: relative;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index:1;
+    width: 90%;
+}
+
+.back-button svg {
+    width: 40px;
+    height: 40px;
+  }
 
 /* Medium Screens (Tablets, 768px to 1024px) */
 @media (max-width: 1024px) {
-    .imageContainer {
-        flex-direction: row; /* Maintain row layout for medium screens */
-        gap: 15px;           /* Reduce spacing between items */
-    }
+  .imageContainer {
+    flex-direction: row; /* Maintain row layout for medium screens */
+    gap: 15px; /* Reduce spacing between items */
+  }
 }
 
 /* Small Screens (Phones, 480px to 767px) */
 @media (max-width: 768px) {
-    .imageContainer {
-        flex-direction: column; /* Stack items vertically on small screens */
-        justify-content: center;
-        gap: 10px;              /* Smaller spacing for mobile */
-    }
+  .imageContainer {
+    flex-direction: column; /* Stack items vertically on small screens */
+    justify-content: center;
+    gap: 10px; /* Smaller spacing for mobile */
+  }
 }
 
 /* Extra Small Screens (Phones, less than 480px) */
 @media (max-width: 480px) {
-    .imageContainer {
-        flex-direction: column;
-        gap: 8px;               /* Minimal spacing for narrow screens */
-    }
+  .imageContainer {
+    flex-direction: column;
+    gap: 8px; /* Minimal spacing for narrow screens */
+  }
 }
 
 /* Very Small Screens (320px and below) */
 @media (max-width: 320px) {
+  .content-body {
+    width: 90%;
+    height: 100vh;
+    margin-top: 80px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+  }  
     .imageContainer {
-        flex-direction: column;
-        gap: 5px;               /* Minimal spacing for very small screens */
-    }
+    flex-direction: column;
+    gap: 5px; /* Minimal spacing for very small screens */
+  }
+  .back-button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 1;
+    width: 90%;
+  }
+  .back-button svg {
+    width: 60px;
+    height: 30%;
+  }
 }
