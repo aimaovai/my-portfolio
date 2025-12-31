@@ -6,7 +6,6 @@ import Footer from "@/components/Footer/Footer";
 import "./home.module.css";
 import Image from "next/image";
 import styles from "./home.module.css";
-import { url } from "inspector";
 
 type ExperienceHighlight = {
   title: string;
