@@ -1,10 +1,10 @@
 /* Style the container to control image sizing */
 .imageContainer {
-  width: 60%; 
+  width: 100%; 
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2% 5% 5% 5%;
+  /* padding: 2% 5% 5% 5%; */
 }
 
 /* Optional additional styles for the image itself */
@@ -24,21 +24,14 @@
 
 /* Small Screens (Phones, 480px to 639px) */
 @media (max-width: 768px) {
-  .imageContainer {
-   display: none;
-  }
+
 }
 
 /* Extra Small Screens (Phones, less than 480px) */
 @media (max-width: 480px) {
-  .imageContainer {
-    width: 0;
-  }
 }
 
 /* Very Small Screens (320px and below) */
 @media (max-width: 320px) {
-  .imageContainer {
-    width: 0;
-  }
+  
 }
