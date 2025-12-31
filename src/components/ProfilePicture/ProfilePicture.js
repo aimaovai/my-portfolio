@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import aima from "/public/images/profile-pic.jpg";
+import aima from "/public/images/profile-pic.png";
 import styles from "./ProfilePicture.module.css";
 
 export default function ProfilePicture() {
