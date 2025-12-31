@@ -39,7 +39,7 @@ export default function NavBar() {
           <div
             className={styles["logo-container"]}
           >
-            <Link href={"/"}>
+            <Link href={"/intro"}>
               <Image src={logo} alt="logo" />
             </Link>
           </div>
