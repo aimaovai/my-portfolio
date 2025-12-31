@@ -1,55 +1,44 @@
-.picture_body {
-  height: 90%;
-  padding: 10%;
-  align-content: baseline;
-  justify-content: center;
-}
-
 /* Style the container to control image sizing */
-.image-container {
-  max-width: 100%; /* Ensures container width doesn't exceed screen size */
-  max-height: 80%;
-  margin: 0 auto; /* Centers the container */
+.imageContainer {
+  width: 60%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 5% 5% 5%;
 }
 
 /* Optional additional styles for the image itself */
-.responsive-image {
-  border-radius: 8px; /* Rounds the corners */
-  object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+.responsiveImage {
+  border-radius:5px; /* Rounds the corners */
+  object-fit: none; /* Ensures the image covers the area while maintaining aspect ratio */
+  justify-self: center;
+  align-self: center;
 }
 
 /* Medium Screens (Tablets, 768px to 1024px) */
 @media (max-width: 1024px) {
-  .image-container {
-    max-width: 600px; /* Reduce max-width on tablets */
-    max-height: 600px;
-    padding: 15px;
+  .responsiveImage {
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
   }
 }
 
-/* Small Screens (Phones, 480px to 767px) */
+/* Small Screens (Phones, 480px to 639px) */
 @media (max-width: 768px) {
-  .image-container {
-    max-width: 80%; /* Full width with slight padding for mobile */
-    max-height: 60%;
-    padding: 10px;
+  .imageContainer {
+   display: none;
   }
 }
 
 /* Extra Small Screens (Phones, less than 480px) */
 @media (max-width: 480px) {
-  .image-container {
-    max-width: 80%; /* Full width for small screens */
-    max-height: 80%;
-    padding: 5px; /* Smaller padding for tight fit */
+  .imageContainer {
+    width: 0;
   }
 }
 
 /* Very Small Screens (320px and below) */
 @media (max-width: 320px) {
-  .image-container {
-    max-width: 80%; /* Full width on extremely small screens */
-    max-height: 80%;
-    padding: 1px; /* Minimal padding for narrow screens */
+  .imageContainer {
+    width: 0;
   }
 }

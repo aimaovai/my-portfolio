@@ -1,0 +1,230 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.domain_welcome {
+  font-weight: 600;
+  font-size: 4.5rem;
+  font-style: normal;
+  color: white;
+  left: 0;
+  line-height: 100px;
+  /* position: relative; */
+  text-align: center;
+  top: 30vh;
+  width: 100%;
+  transition: cubic-bezier(0.645, 0.045, 0.355, 1) transform 5s;
+}
+.domain_subtitle {
+  font-weight: 400;
+  font-size: 2rem;
+  font-style: normal;
+  color: white;
+  left: 0;
+  line-height: 50px;
+  /* position: relative; */
+  text-align: center;
+  top: 32vh;
+  width: 100%;
+  transition: cubic-bezier(0.645, 0.045, 0.355, 1) transform 5s;
+}
+.domain_subline {
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: white;
+  left: 0;
+  line-height: 40px;
+  /* position: relative; */
+  text-align: center;
+  top: 34vh;
+  width: 100%;
+  transition: cubic-bezier(0.645, 0.045, 0.355, 1) transform 5s;
+}
+.enter_button {
+  margin: 10px auto 15px auto;
+  font-size: xx-large;
+  height: 50px;
+}
+/* body {
+  color: var(--foreground);
+  background: var(--background);
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+} */
+video {
+  min-height: 100vh;
+  position: fixed;
+  width: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust for content readability */
+}
+.landing-page {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 5rem;
+  font-style: normal;
+  color: white;
+}
+.content {
+  position: absolute;
+  width: 100%;
+  /* height: 100%; */
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content-body {
+  width: 90%;
+  margin-top: 80px;
+  padding-top: 80px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-self: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: xxx-large;
+}
+/* Medium Screens (Tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .content-body {
+    margin: 0 5%;
+    width: 90%;
+    padding-top: 80px;
+    height: 100vh;
+    flex-direction: column; /* Switch to column layout on tablets */
+  }
+  video {
+    height: 100vmax;
+  }
+
+  .overlay {
+    height: 100vmax;
+  }
+
+  .domain_welcome {
+    font-size: 5rem;
+  }
+
+  .domain_subtitle {
+    font-size: 1.5rem;
+  }
+
+  .domain_subline {
+    font-size: 1.2rem;
+  }
+
+}
+@media (max-width: 768px) {
+  video {
+    height: 100vmax;
+  }
+  .content-body {
+    top: 0;
+    margin: 0 2%;
+    width: 96%;
+    flex-direction: row; /* Column layout for mobile */
+  }
+
+  .domain_welcome {
+    font-size: 4rem;
+  }
+
+  .domain_subtitle {
+    font-size: 1.3rem;
+  }
+  .domain_subline {
+    font-size: 1rem;
+  }
+
+  .text {
+    justify-self: center;
+  }
+
+}
+@media (max-width: 480px) {
+  video {
+    height: 100vmax;
+  }
+  .content-body {
+    margin: 0;
+    width: 100%;
+    padding: 10px; /* Add padding for breathing space */
+    flex-direction: row;
+  }
+
+  .domain_welcome {
+    font-size: 3rem;
+    line-height: normal;
+  }
+  .domain_subtitle {
+    font-size: 1rem;
+    line-height: normal;
+  }
+  .domain_subline {
+    font-size: 0.9rem;
+    line-height: normal;
+  }
+
+  .enter_button {
+    margin: 5px auto 10px auto;
+    font-size: medium;
+    height: 40px;
+  }
+  h1 {
+    font-size: x-large;
+  }
+}
+@media (max-width: 320px) {
+  video {
+    height: 100vmax;
+  }
+
+  .overlay {
+    height: 100vmax;
+  }
+  .content-body {
+    margin: 0;
+    width: 100%;
+    top: 80px;
+    padding: 5px; /* Smaller padding to fit small screens */
+    flex-direction: column;
+  }
+
+  .domain_welcome {
+    font-size: 2rem;
+    line-height: normal;
+  }
+
+  .enter_button {
+    font-size: small;
+    height: 30px;
+  }
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

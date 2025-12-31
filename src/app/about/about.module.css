@@ -1,52 +1,203 @@
-.text {
-  width: 50%;
-  margin-left: 10%;
-  text-align: center;
+.content-body {
+  width: 90%;
+  margin-top: 80px;
+  padding: 40px 0;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-self: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+}
+
+.h1-container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+.container h1 {
+  font-size: xxx-large;
+  margin: 2%;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  text-align: left;
+}
+
+.about-container {
+  width: 80%;
+}
+
+.p1 {
+  margin: 2%;
+  text-align: justify;
   font-size: medium;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: normal;
-  line-height: 2;
+  line-height: 2.5rem;
   white-space: pre-line;
+  
+  color: rgb(0, 0, 0);
+}
+
+.p2 {
+  margin: 1%;
+  text-align: justify;
+  font-size: medium;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: normal;
+  line-height: 2.5rem;
+  white-space: pre-line;
+  color: rgb(0, 0, 0);
+}
+
+.footer {
+  height: 80px;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  color: white;
+  /* margin: 0 10%; */
+  padding: 20px 0;
+  gap: 100px;
 }
 
+.footer svg {
+  width: 35px;
+  height: 35px;
+}
+
+@media (max-width: 1920px) {
+  .p1 {
+    width: 95%; /* Increase width for readability */
+    font-size: larger; /* Slightly increase font size */
+  }
+
+  .p2 {
+    font-size: larger; /* Slightly increase font size */
+  }
+}
+
+@media (max-width: 1560px) {
+  .p1 {
+    width: 95%; /* Increase width for readability */
+    font-size: large; /* Slightly increase font size */
+  }
+
+  .p2 {
+    font-size: large; /* Slightly increase font size */
+  }
+}
+
+@media (max-width: 1336px) {
+  .p1 {
+    width: 95%; /* Increase width for readability */
+    font-size: large; /* Slightly increase font size */
+  }
+
+  .p2 {
+    font-size: large; /* Slightly increase font size */
+  }
+}
 @media (max-width: 1024px) {
-  .text {
-    width: 70%; /* Increase width for readability */
-    margin-left: 5%; /* Reduce margin */
+  .container h1 {
+    font-size: xx-large;
+    margin: 2%;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    text-align: left;
+  }
+  .p1 {
+    width: 95%; /* Increase width for readability */
     font-size: medium; /* Slightly increase font size */
+    line-height: 2rem;
+  }
+
+  .p2 {
+    font-size: medium; /* Slightly increase font size */
+    line-height: 2rem;
   }
 }
 
-/* Small Screens (Phones, 480px to 767px) */
+/* Medium Screens (tablet landscape, smaller laptop screens) */
 @media (max-width: 768px) {
-  .text {
-    width: 90%; /* Full width for mobile */
-    margin-left: 0; /* Center align on smaller screens */
-    font-size: small; /* Adjust font size to fit */
+  .h1-container {
+    width: 90%;
   }
+  /* .about-container {
+    margin: 0 5%;
+  } */
+   .container h1 {
+    font-size: x-large;
+    margin: 0 7%;
+   }
+  .p1 {
+    width: 95%; /* Full width for mobile */
+    font-size: 1rem; /* Adjust font size to fit */
+    line-height: 1.5;
+  }
+
+  .p2 {
+    font-size: 1rem; /* Adjust font size to fit */
+    line-height: 1.5;
+}
 }
 
 /* Extra Small Screens (Phones, less than 480px) */
 @media (max-width: 480px) {
-  .text {
+  .h1-container {
+    width: 90%;
+  }
+
+  .container h1 {
+    font-size: x-large;
+    margin: 0 6%;
+  }
+  
+  .about-container {
+    margin: 0 5%;
+  }
+  .p1 {
     width: 100%; /* Full width on very small screens */
-    margin-left: 0; /* Remove left margin */
-    padding: 10px; /* Add padding for breathing space */
-    font-size: x-small; /* Adjust font size for small screens */
+    font-size: 0.75rem; /* Adjust font size for small screens */
+    line-height: 1.5;
+    white-space: normal;
+  }
+
+  .p2 {
+    font-size: 0.75rem; /* Adjust font size for small screens */
+    line-height: 1.5;
+    white-space: normal;
   }
 }
 
 /* Very Small Screens (320px and below) */
 @media (max-width: 320px) {
-  .text {
+  .container h1 {
+    font-size: x-large;
+    /* margin: 2%; */
+    margin-left: 8%;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    /* text-align: left; */
+  }
+  
+  .p1 {
     width: 100%; /* Full width on extremely small screens */
-    margin-left: 0; /* No left margin */
-    padding: 5px; /* Smaller padding for tight fit */
-    font-size: x-small; /* Adjust font size to remain readable */
+    font-size: 0.75rem; /* Adjust font size to remain readable */
+    line-height: 1.5; /* Slightly reduce line height */
+  }
+
+  .p2 {
+    font-size: 0.75rem; /* Adjust font size to remain readable */
     line-height: 1.5; /* Slightly reduce line height */
   }
 }
