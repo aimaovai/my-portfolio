@@ -1,10 +1,12 @@
 "use client";
-import { useRouter } from "next/navigation";
 import { Button } from "@nextui-org/button";
 import { BsArrowRight } from "react-icons/bs";
 import LastUpdated from "@/components/LastUpdated/LastUpdated";
-export default function LandingPage() {
-  const router = useRouter();
+
+type Props = {
+  onEnter: () => void;
+};
+export default function LandingPage({ onEnter }: Props) {
   return (
     <div className="landing-page">
       {/* <div className="domain_welcome"> */}
@@ -19,7 +21,7 @@ export default function LandingPage() {
       <div className="enter_button">
         <Button
           color="default"
-          onClick={() => router.push("/home")}
+          onClick={onEnter}
           className="enter_button"
           // style={{ fontSize: "x-large", height: "50px" }}
         >
