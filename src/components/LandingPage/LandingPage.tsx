@@ -14,9 +14,6 @@ export default function LandingPage({ onEnter }: Props) {
       <p className="domain_subtitle">
         Explore my world of software engineering, tech insights, and more.
       </p>
-      <p className="domain_subtitle">
-        Building thoughtful systems — end to end.
-      </p>
       <p className="domain_subtitle">Where software meets intention.</p>
       <div className="enter_button">
         <Button
@@ -31,6 +28,7 @@ export default function LandingPage({ onEnter }: Props) {
       <p className="domain_subline">
         Software Engineer · Builder · Problem Solver
       </p>
+      <p className="domain_subline" style={{ fontStyle: "normal"}}>- Aima Ovai</p>
       <LastUpdated year={2025} position="right" />
       {/* </div> */}
     </div>
