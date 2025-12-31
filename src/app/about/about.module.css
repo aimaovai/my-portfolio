@@ -76,6 +76,7 @@
 .heroRight {
   display: flex;
   justify-content: flex-end;
+  align-self: center;
 }
 
 .heroPlaceholder {
