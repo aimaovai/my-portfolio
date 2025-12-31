@@ -11,11 +11,33 @@
     padding: 20px 0;
     /* gap: 100px; */
     border-top: 1px solid rgb(0, 0, 0);
-
   }
   
   .footer svg {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
+
+  .iconBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(255, 255, 255, 0.70);
+  border: 1px solid rgba(11, 18, 32, 0.12);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+
+  color: rgba(11, 18, 32, 0.78);
+  text-decoration: none;
+
+  transition: transform 140ms ease, background 140ms ease;
+}
+
+.iconBtn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.85);
+}
   
