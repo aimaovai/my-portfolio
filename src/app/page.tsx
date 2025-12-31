@@ -1,23 +1,40 @@
-"use client";
-import { useRouter } from "next/navigation";
-import { Button } from "@nextui-org/button";
-export default function LandingPage() {
+'use client';
+
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import LandingPage from '@/components/LandingPage/LandingPage';
+
+const VISITED_KEY = 'aima_portfolio_visited_v1';
+
+export default function Page() {
   const router = useRouter();
+  const [shouldShowLandingPage, setShouldShowLandingPage] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    try {
+      const visited = localStorage.getItem(VISITED_KEY);
+      if (visited === 'true') {
+        router.replace('/home'); // skip LandingPage
+      } else {
+        setShouldShowLandingPage(true); // show LandingPage
+      }
+    } catch {
+      // If storage is blocked, default to showing LandingPage
+      setShouldShowLandingPage(true);
+    }
+  }, [router]);
+
+  // While deciding, render nothing (prevents flicker)
+  if (shouldShowLandingPage === null) return null;
+
   return (
-    <div className="landing-page">
-      {/* <div className="domain_welcome"> */}
-      <text className="domain_welcome">Welcome to Aima&apos;s Domain</text>
-      <div className="enter_button">
-        <Button
-          color="default"
-          onClick={() => router.push("/home")}
-          className="enter_button"
-          // style={{ fontSize: "x-large", height: "50px" }}
-        >
-          Click to enter
-        </Button>
-      </div>
-      {/* </div> */}
-    </div>
+    <LandingPage
+      onEnter={() => {
+        try {
+          localStorage.setItem(VISITED_KEY, 'true');
+        } catch {}
+        router.push('/home');
+      }}
+    />
   );
 }
