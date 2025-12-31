@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
-import { list } from "@vercel/blob";
 import { Inter } from "next/font/google";
 import "./globals.css";
 const inter = Inter({
@@ -19,34 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-        <div className="overlay"></div>
-        <Suspense fallback={<div>Loading...</div>}>
-          <VideoComponent fileName="background_video-1C9IegIVapt5b14CV3xmFOqvb3o0PK.mp4" />
-        </Suspense>
+        
+        <div className="landing-container">
+          <div className="animated-gradient" />
+        </div>
         {children}
       </body>
     </html>
-  );
-}
-
-async function VideoComponent({ fileName }: { fileName: string }) {
-  const { blobs } = await list({
-    prefix: fileName,
-    limit: 1,
-  });
-  const { url } = blobs[0];
-
-  return (
-    <video
-      preload="metadata"
-      autoPlay
-      loop
-      muted
-      playsInline
-      aria-label="Video player"
-    >
-      <source src={url} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
   );
 }

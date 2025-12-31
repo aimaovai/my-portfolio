@@ -107,6 +107,34 @@ video {
 h1 {
   font-size: xxx-large;
 }
+
+.animated-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    150deg,
+    #0b1320,
+    #111827,
+    #b2b9c4,
+    #0b1320
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 20s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* Medium Screens (Tablets, 768px and up) */
 @media (max-width: 1024px) {
   .content-body {
