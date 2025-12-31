@@ -10,14 +10,14 @@ export default function LandingPage({ onEnter }: Props) {
   return (
     <div className="landing-page">
       {/* <div className="domain_welcome"> */}
-      <text className="domain_welcome">Designing systems that move forward.</text>
-      <text className="domain_subtitle">
+      <p className="domain_welcome">Designing systems that move forward.</p>
+      <p className="domain_subtitle">
         Explore my world of software engineering, tech insights, and more.
-      </text>
-      <text className="domain_subtitle">
+      </p>
+      <p className="domain_subtitle">
         Building thoughtful systems — end to end.
-      </text>
-      <text className="domain_subtitle">Where software meets intention.</text>
+      </p>
+      <p className="domain_subtitle">Where software meets intention.</p>
       <div className="enter_button">
         <Button
           color="default"
@@ -28,9 +28,9 @@ export default function LandingPage({ onEnter }: Props) {
           Enter <BsArrowRight size={24} style={{ marginLeft: "8px" }} />
         </Button>
       </div>
-      <text className="domain_subline">
+      <p className="domain_subline">
         Software Engineer · Builder · Problem Solver
-      </text>
+      </p>
       <LastUpdated year={2025} position="right" />
       {/* </div> */}
     </div>
